@@ -6,7 +6,11 @@
 </head>
 <body style="font-family:sans-serif; padding:2em;">
   <h2>Contact Me</h2>
+
   <form action="https://formspree.io/f/xblyyark" method="POST">
+    <!-- ✅ Add this hidden field here -->
+    <input type="hidden" name="_redirect" value="https://em-fx.com/thank-you.html">
+
     <label>Name:</label><br>
     <input type="text" name="name" required><br><br>
 
