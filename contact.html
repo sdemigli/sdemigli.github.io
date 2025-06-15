@@ -1,15 +1,23 @@
-<form action="https://formspree.io/f/xblyyark
-" method="POST">
-  <input type="hidden" name="_redirect" value="https://em-fx.com/index.html">
+<form id="contact-form" action="https://formspree.io/f/xblyyark" method="POST" style="max-width: 500px; margin: 2em auto; font-family: sans-serif;">
+  <h2>Contact Me</h2>
 
-  <label>Your name:</label>
-  <input type="text" name="name" required>
+  <label for="name">Name:</label><br>
+  <input type="text" name="name" id="name" required style="width: 100%; margin-bottom: 1em;"><br>
 
-  <label>Your email:</label>
-  <input type="email" name="_replyto" required>
+  <label for="email">Email:</label><br>
+  <input type="email" name="_replyto" id="email" required style="width: 100%; margin-bottom: 1em;"><br>
 
-  <label>Your message:</label>
-  <textarea name="message" required></textarea>
+  <label for="message">Message:</label><br>
+  <textarea name="message" id="message" rows="5" required style="width: 100%; margin-bottom: 1em;"></textarea><br>
 
-  <button type="submit">Send</button>
+  <button type="submit" style="padding: 0.5em 1em;">Send</button>
 </form>
+
+<script>
+  const form = document.getElementById('contact-form');
+  form.addEventListener('submit', function () {
+    setTimeout(() => {
+      window.location.href = 'https://em-fx.com/'; // change if you want another page
+    }, 500); // allow time for Formspree to process
+  });
+</script>
